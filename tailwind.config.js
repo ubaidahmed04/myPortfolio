@@ -28,7 +28,20 @@ module.exports = withMT({
         'custom': '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1)', // Base shadow
         'custom-hover': '0 8px 15px rgba(125, 197, 190, 0.5), 0 2px 4px rgba(125, 197, 190, 0.3)', // Custom shadow on hover
       },
+      textShadow: {
+        'custom': '1px 1px 1px limegreen, 0 0 .5em lightblue, 0 0 0.1em lightseagreen',
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.text-shadow-custom': {
+          textShadow: '1px 1px 1px limegreen, 0 0 .5em lightblue, 0 0 0.1em lightseagreen',
+        },
+      };
+
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
 });

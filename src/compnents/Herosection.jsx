@@ -13,7 +13,7 @@ function Herosection() {
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.7 }}
-        className="flex flex-col p-5 md:w-[500px]"
+        className="flex flex-col p-4 md:w-[500px]"
       >
         <span className="text-4xl md:text-6xl font-extrabold text-blue">Hi </span>
         <span className="text-4xl md:text-6xl font-extrabold text-blue pt-3">
@@ -30,7 +30,7 @@ function Herosection() {
           </Button>
           <Button
             variant="outlined"
-            className="w-full sm:w-1/2 bg-transparent bg-light-blue-400 shadow-custom hover:shadow-custom-hover transition-shadow duration-300 hover:bg-black"
+            className="w-full sm:w-1/2 bg-transparent bg-light-blue-400 shadow-custom hover:shadow-custom-hover transition-shadow duration-300 hover:bg-black hover:text-light"
           >
             DOWNLOAD MY RESUME
           </Button>

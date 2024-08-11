@@ -23,22 +23,16 @@ export default function Home() {
         <About/>
         {/* <ScrollxSection/> */}
         {/* <TextCard/> */}
-        {/* <div
-          ref={boxRef}
-          style={{
-            opacity: 0,
-            transform: 'translateY(50px)',
-          }}
-          className='flex flex-wrap justify-center'
+        <div
+         
+          className='flex flex-wrap justify-center py-5'
         >
         <Cardlink />
         <Cardlink />
         <Cardlink />
         <Cardlink />
-        </div> */}
-        {/* <div >
+        </div>
         <ContactSec />
-        </div> */}
       </main>
     </ThemeProvider>
   );

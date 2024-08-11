@@ -14,7 +14,7 @@ function About() {
           viewport={{ once: false, amount: 0.9 }}
           className='flex flex-col gap-4 w-full md:w-1/2 lg:w-1/3'
         >
-          <span className='text-4xl md:text-6xl font-semibold font-agustina text-teal-200'>
+          <span className='text-4xl md:text-6xl font-semibold font-agustina  text-shadow-custom'>
             ABOUT ME
           </span>
           <span className='text-light md:text-lg tracking-wide leading-relaxed'>
