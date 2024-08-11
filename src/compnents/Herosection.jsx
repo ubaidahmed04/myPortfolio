@@ -1,19 +1,19 @@
 "use client";
-import React from 'react'
+import React from 'react';
 import Icon from './Icon';
 import { Button } from '@material-tailwind/react';
 import { motion } from 'framer-motion';
-import { fadeIn } from './variants'
+import { fadeIn } from './variants';
 
 function Herosection() {
   return (
-    <div className="flex flex-col md:flex-row sm:px-10 pt-5 justify-around">
+    <div className="flex flex-col md:flex-row sm:px-10 pt-5 justify-around overflow-x-hidden">
       <motion.div
         variants={fadeIn('right', 0.2)}
         initial="hidden"
         whileInView={"show"}
         viewport={{ once: false, amount: 0.7 }}
-        className="flex flex-col p-4 md:w-[500px]"
+        className="flex flex-col p-4 md:w-[500px] "
       >
         <span className="text-4xl md:text-6xl font-extrabold text-blue">Hi </span>
         <span className="text-4xl md:text-6xl font-extrabold text-blue pt-3">

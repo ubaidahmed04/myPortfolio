@@ -156,7 +156,7 @@ export default function Navigation() {
   }, []);
 
   return (
-    <Navbar className="bg-light min-w-full sticky top-0 z-10 rounded-none">
+    <Navbar className="bg-light min-w-full  rounded-none">
       <div className="flex items-center justify-between text-blue-gray-900  ">
         <Typography
           as="a"
