@@ -14,10 +14,7 @@ export default function RootLayout({ children }) {
       <head>
 
         <meta name="description" content={metadata.description} />
-        <script
-          src="https://kit.fontawesome.com/3b2468ae5a.js"
-          crossOrigin="anonymous"
-        ></script>
+       
       </head>
       <body className={inter.className}>{children}</body>
     </html>
