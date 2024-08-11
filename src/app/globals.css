@@ -5,13 +5,28 @@
 :root {
   --theme-color: #607D8B;
 }
+
+
+/* styles/globals.css */
 @font-face {
-  font-family: 'Agustina Regular';
-  src: url('/fonts/Agustina-Regular.woff2') format('woff2'),
-       url('/fonts/Agustina-Regular.woff') format('woff');
+  font-family: "Agustina Regular";
+  src: url("/fonts/Agustina-Signature.otf") format("truetype");
   font-weight: normal;
-  font-style: normal;
 }
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/fonts/Nunito-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+}
+
+.agustina {
+  font-family: "Agustina Regular";
+}
+.nunito {
+  font-family: "Nunito", sans-serif !important;
+}
+
 /* 
 :root {
   --foreground-rgb: 0, 0, 0;
