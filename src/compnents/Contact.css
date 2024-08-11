@@ -1,0 +1,29 @@
+
+.contact-main{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* padding: 300px; */
+}
+.contact-heading{
+    color: #FFDD00;
+    text-shadow: #989898;
+    font-size: 3rem;
+    text-shadow: 1px 1px 1px yellow, 0 0 .5em orangered, 0 0 0.1em orangered;
+
+}
+
+.content-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 3px;
+}
+.contact-links{
+    border-radius: 1rem;
+  
+}
