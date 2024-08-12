@@ -8,7 +8,7 @@ import { useRef, useEffect } from 'react';
 import { Cardlink } from '@/compnents/Card';
 import ScrollxSection from '@/compnents/ScrollScreen';
 import { ProjectCard } from '@/compnents/ProjectCard';
-import TextCard from '@/compnents/TextCard';
+import AutoSlide from '@/compnents/Autoslide';
 import About from '@/compnents/About';
 
 
@@ -21,7 +21,7 @@ export default function Home() {
         <Herosection />
       
         <About />
-        {/* <ScrollxSection/> */}
+        <AutoSlide/>
         {/* <TextCard/> */}
         <div
 
