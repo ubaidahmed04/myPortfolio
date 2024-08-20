@@ -4,18 +4,29 @@ import { ThemeProvider } from "@material-tailwind/react";
 import Herosection from "@/compnents/Herosection";
 import ContactSec from '@/compnents/Contact';
 import gsap from 'gsap';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Cardlink } from '@/compnents/Card';
 import ScrollxSection from '@/compnents/ScrollScreen';
 import { ProjectCard } from '@/compnents/ProjectCard';
 import AutoSlide from '@/compnents/Autoslide';
 import About from '@/compnents/About';
+import Loader from '@/compnents/Loader';
 
 
 export default function Home() {
-
+   const [loader,setLoader] = useState(true)
+   useEffect(()=>{
+   const timer =  setTimeout(()=>{
+      setLoader(false)
+    },2000)
+    return ()=> clearTimeout(timer)
+   },[])
   return (
     <ThemeProvider>
+      {
+        loader ?  <div className='h-[100vh] flex justify-center items-center bg-dark'>
+        <Loader />
+      </div> :(
       <main className='bg-dark '>
         <Navigation />
         <Herosection />
@@ -33,7 +44,9 @@ export default function Home() {
           <Cardlink path="M23.546 10.73L13.27.454a1.551 1.551 0 00-2.192 0l-2.1 2.1 2.839 2.839a2.54 2.54 0 013.13 3.13l2.82 2.82a2.54 2.54 0 11-1.062 1.062l-2.69-2.69v6.19a2.54 2.54 0 11-1.5-.05v-6.14a2.54 2.54 0 01-1.2-3.25L7.665 4.59l-6.211 6.2a1.551 1.551 0 000 2.191l10.276 10.276a1.551 1.551 0 002.191 0L23.546 12.92a1.551 1.551 0 000-2.191z" />
         </div>
         <ContactSec />
-      </main>
+      </main> )
+      }
+
     </ThemeProvider>
   );
 }

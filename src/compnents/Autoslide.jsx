@@ -22,19 +22,19 @@ const Autoslide = () => {
         </div>
         <div className='bg-light'>
          <ProjectCard/>
-        </div>
+             </div>
         <div className='bg-light'>
          <ProjectCard/>
-        </div>
+             </div>
         <div className='bg-light'>
          <ProjectCard/>
-        </div>
+             </div>
         <div className='bg-light'>
          <ProjectCard/>
-        </div>
+             </div>
         <div className='bg-light'>
          <ProjectCard/>
-        </div>
+             </div>
       </Slider>
     </div>
   )

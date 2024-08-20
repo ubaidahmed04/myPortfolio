@@ -4,7 +4,7 @@ import Icon from './Icon';
 import { Button } from '@material-tailwind/react';
 import { motion } from 'framer-motion';
 import { fadeIn } from './variants';
-
+import './Styles.css'
 function Herosection() {
   return (
     <div className="flex flex-col md:flex-row sm:px-10 pt-5 justify-around overflow-x-hidden">
@@ -25,14 +25,11 @@ function Herosection() {
         </span>
         <Icon />
         <div className="flex gap-3 pt-16 flex-wrap sm:items-center justify-center md:gap-4 md:justify-start md:flex-nowrap">
-          <Button className="w-full sm:w-1/2 bg-[#303030] shadow-custom hover:shadow-custom-hover transition-shadow duration-300">
+          <Button className="w-full sm:w-1/2 btn2">
             CONTACT ME
           </Button>
-          <Button
-            variant="outlined"
-            className="w-full sm:w-1/2 bg-transparent bg-light-blue-400 shadow-custom hover:shadow-custom-hover transition-shadow duration-300 hover:bg-black hover:text-light"
-          >
-            DOWNLOAD MY RESUME
+          <Button className="w-full sm:w-1/2 btn">
+            <span> MY RESUME</span>
           </Button>
         </div>
       </motion.div>

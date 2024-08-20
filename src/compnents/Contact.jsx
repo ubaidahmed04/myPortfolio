@@ -9,7 +9,7 @@ import { fadeIn } from './variants';
 function ContactSec() {
 
   return (
-    <motion.div 
+    <motion.div
       variants={fadeIn('up', 0.2)}
       initial="hidden"
       whileInView={"show"}

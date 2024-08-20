@@ -2,8 +2,9 @@ import React from 'react';
 
 const ProfileCard = () => {
   return (
-    <div className="bg-gray w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl shadow-lg rounded-lg overflow-hidden">
+    <div className="bg-gray w-full max-w-sm sm:max-w-md sm:my-8 md:max-w-lg lg:max-w-xl  rounded-lg overflow-hidden">
       {/* Banner Image */}
+    
       <div className="w-full h-40 md:h-48 lg:h-56">
         <img
           loading="lazy"
