@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { fadeIn } from './variants';
 
 function ContactSec() {
-
+//  for from validation zod library use in nextjs
   return (
     <motion.div
       variants={fadeIn('up', 0.2)}

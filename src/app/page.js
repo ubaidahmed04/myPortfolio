@@ -7,7 +7,6 @@ import gsap from 'gsap';
 import { useRef, useEffect, useState } from 'react';
 import { Cardlink } from '@/compnents/Card';
 import ScrollxSection from '@/compnents/ScrollScreen';
-import { ProjectCard } from '@/compnents/ProjectCard';
 import AutoSlide from '@/compnents/Autoslide';
 import About from '@/compnents/About';
 import Loader from '@/compnents/Loader';

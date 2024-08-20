@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-
+      <link rel="icon" href="/Images/avatarimg.png" />
         <meta name="description" content={metadata.description} />
        
       </head>

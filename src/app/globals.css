@@ -231,8 +231,25 @@
   margin-left: 15px;
   animation: loader_5191 675ms ease-in-out 600ms infinite;
 }
-/* loader */
+.leaflet-container {
+  height: calc(100vh - 124px);
+}
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.1);
+}
 
+::-webkit-scrollbar-thumb {
+  background: #354649;
+}
+/* loader */
+/* slide dot btn  */
+/* Style for the dots container */
+
+
+/* slide dot btn  */
+/*  */
 /* 
 :root {
   --foreground-rgb: 0, 0, 0;
