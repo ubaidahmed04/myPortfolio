@@ -7,7 +7,7 @@ import { fadeIn } from './variants';
 import './Styles.css'
 function Herosection() {
   return (
-    <div className="flex flex-col md:flex-row sm:px-10 pt-5 justify-around overflow-x-hidden">
+    <div className="flex flex-col md:flex-row sm:px-10 pt-5 justify-between overflow-x-hidden">
       <motion.div
         variants={fadeIn('right', 0.2)}
         initial="hidden"
@@ -40,7 +40,7 @@ function Herosection() {
         viewport={{ once: false, amount: 0.7 }}
         className="hidden md:block md:w-[400px] md:ml-8"
       >
-        <img src='/Images/avatarimg.png' className='w-full rounded-full' alt="avatar" />
+        <img src='/Images/avatarimg.png' loading="lazy" className='w-full rounded-full' alt="avatar" />
       </motion.div>
     </div>
   );

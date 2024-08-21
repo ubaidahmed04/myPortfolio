@@ -9,7 +9,7 @@ import {
 
 export function ProjectCard({path,URL,title,description}) {
   return (
-    <Card className="w-full h-128 flex-shrink-0 flex flex-col flex-wrap">
+    <Card className="w-full flex-shrink-0 flex flex-col flex-wrap">
   <CardHeader
     shadow={false}
     floated={false}

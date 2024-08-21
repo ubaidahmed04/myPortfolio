@@ -8,7 +8,7 @@ import {
 
 export function Cardlink({ path}) {
     return (
-        <Card className="mt-6 w-56 flex items-center justify-center p-4 m-3">
+        <Card className="mt-6 w-64 flex items-center justify-center p-4 m-3">
 
             <svg
                 xmlns="http://www.w3.org/2000/svg"

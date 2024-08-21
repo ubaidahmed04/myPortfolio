@@ -16,4 +16,4 @@ export const fadeIn = (direction, delay) => {
             },
         },
     };
-};
+}

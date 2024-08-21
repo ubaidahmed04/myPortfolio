@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   Navbar,
   Collapse,
@@ -22,7 +22,7 @@ import {
   WrenchIcon,
   GiftIcon,
 } from "@heroicons/react/24/solid";
-
+import { useContactRef } from "./variants";
 const navListMenuItems = [
   {
     title: "Projects",
@@ -41,7 +41,7 @@ const navListMenuItems = [
   },
 ];
 
-function NavListMenu() {
+function NavListMenu({props,sectionRef}) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
@@ -114,7 +114,9 @@ function NavListMenu() {
   );
 }
 
-function NavList() {
+
+function NavList({props,sectionRef,projectRef}) {
+  console.log("ref navlist",projectRef)
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex lg:flex-row lg:items-center lg:p-0">
       <Typography
@@ -124,7 +126,7 @@ function NavList() {
         color="blue-gray"
         className="font-sans"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4 font-bold tracking-wider">Home</ListItem>
+        <ListItem className="flex items-center gap-2 py-2 pr-4 font-bold tracking-wider" href='#home'>Home</ListItem>
       </Typography>
       <NavListMenu />
       <Typography
@@ -134,17 +136,21 @@ function NavList() {
         color="blue-gray"
         className="font-sans"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4 font-bold tracking-wider">
+        <ListItem onClick={()=> props(sectionRef) } className="flex items-center gap-2 py-2 pr-4 font-bold tracking-wider">
           Contact Us
+        </ListItem>
+        <ListItem onClick={()=> props(projectRef) } className="flex items-center gap-2 py-2 pr-4 font-bold tracking-wider">
+          project
         </ListItem>
       </Typography>
     </List>
   );
 }
 
-export default function Navigation() {
+export default function Navigation({props,sectionRef,projectRef}) {
   const [openNav, setOpenNav] = React.useState(false);
-
+  console.log(props.props)
+ 
   React.useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 960) {
@@ -168,7 +174,7 @@ export default function Navigation() {
           <span className="block  font-serif text-xl sm:text-4xl italic text-shadow-custom">{"Ahmed / >"}</span>
         </Typography>
         <div className="hidden lg:flex">
-          <NavList />
+          <NavList props={props} sectionRef={sectionRef} projectRef={projectRef} />
         </div>
         <div className="hidden lg:flex items-center">
           <img src="/Images/avatarimg.png" className="w-10 cursor-pointer" alt="User Avatar"/>
@@ -187,7 +193,7 @@ export default function Navigation() {
         </IconButton>
       </div>
       <Collapse open={openNav}>
-        <NavList />
+        <NavList props={props} sectionRef={sectionRef} projectRef={projectRef}/>
         <div className="flex items-center gap-2 lg:hidden p-4">
           <img src="/Images/avatarimg.png" className="w-10 cursor-pointer" alt="User Avatar"/>
         </div>

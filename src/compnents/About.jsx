@@ -6,13 +6,13 @@ import { fadeIn } from './variants';
 function About() {
   return (
     <>
-      <div className=' xl:py-[100px] pt-20 px-14 md:px-0 md:py-30 flex flex-col justify-around md:flex-row flex-wrap gap-8 '>
+      <div className=' xl:py-[100px] pt-20  sm:px-14 px-6  py-20 flex flex-col justify-center lg:justify-between md:flex-row flex-wrap gap-8 '>
         <motion.div
           variants={fadeIn('right', 0.2)}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.9 }}
-          className='flex flex-col gap-4 w-full md:w-1/2 lg:w-1/3'
+          className='flex flex-col gap-4 w-full  lg:w-1/2 xl:w-1/3  '
         >
           <span className='text-4xl md:text-6xl font-semibold font-agustina  text-shadow-custom'>
             ABOUT ME
