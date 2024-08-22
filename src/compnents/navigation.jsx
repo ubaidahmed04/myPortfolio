@@ -16,48 +16,63 @@ import {
   WrenchIcon,
   GiftIcon,
 } from "@heroicons/react/24/solid";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleTheme } from "@/app/redux/themeSlice";
 
 
 
 
-function NavList({props,sectionRef,projectRef,HomeRef,aboutRef}) {
-  console.log("ref navlist",projectRef)
+function NavList({ props, sectionRef, projectRef, HomeRef, aboutRef }) {
+  const isTheme = useSelector((state) => state.theme.isTheme);
+  console.log(isTheme, "theme check")
+  const dispatch = useDispatch();
   return (
-    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:p-0  flex  sm:flex-col lg:flex-row">
+    <List className={`mt-4 mb-6 p-0 ${isTheme ? 'text-dark' : 'text-light'} lg:mt-0 lg:mb-0 lg:p-0  flex  sm:flex-col lg:flex-row`}>
       <Typography
         as="a"
         href="#"
         variant="small"
-        color="blue-gray"
+        // color="blue-gray"
         className="font-sans"
       >
-        <ListItem onClick={()=> props(HomeRef) } className="flex  gap-2 py-2 pr-4 font-bold tracking-wider" >Home</ListItem>
+        <ListItem onClick={() => props(HomeRef)} className="flex  gap-2 py-2 pr-4 font-bold tracking-wider" >Home</ListItem>
       </Typography>
       <Typography
         as="a"
-       
+
         variant="small"
-        color="blue-gray"
+        // color="blue-gray"
         className="font-sans flex justify-center flex-col lg:flex-row gap-3 items-center w-full"
       >
-        <ListItem onClick={()=> props(sectionRef) } className="flex items-center gap-2 py-2 w-full pr-4 font-bold  tracking-wider">
+        <ListItem onClick={() => props(sectionRef)} className="flex items-center gap-2 py-2 w-full pr-4 font-bold  tracking-wider">
           Contact
         </ListItem>
-        <ListItem onClick={()=> props(projectRef) } className="flex items-center gap-2 w-full py-2 pr-4 font-bold tracking-wider">
+
+        <ListItem onClick={() => props(projectRef)} className="flex items-center gap-2 w-full py-2 pr-4 font-bold tracking-wider">
           project
         </ListItem>
-        <ListItem onClick={()=> props(aboutRef) } className="flex items-center gap-2 w-full py-2 pr-4 font-bold tracking-wider">
-          About 
+        <ListItem onClick={() => props(aboutRef)} className="flex items-center gap-2 w-full py-2 pr-4 font-bold tracking-wider">
+          About
+        </ListItem>
+        <ListItem  className="flex items-center gap-2 py-2 w-full pr-4 font-bold  tracking-wider">
+          {/* {isTheme ? 'Dark' : 'Light'} */}
+          <label class="switch">
+            <input type="checkbox" onClick={() => dispatch(toggleTheme())} />
+            <span class="slider"></span>
+          </label>
         </ListItem>
       </Typography>
     </List>
   );
 }
 
-export default function Navigation({props,sectionRef,projectRef,HomeRef,aboutRef}) {
+export default function Navigation({ props, sectionRef, projectRef, HomeRef, aboutRef }) {
+  const isTheme = useSelector((state) => state.theme.isTheme);
+  console.log(isTheme, "theme check")
+  const dispatch = useDispatch();
   const [openNav, setOpenNav] = React.useState(false);
-  console.log(props.props)
- 
+
+
   React.useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 960) {
@@ -69,7 +84,7 @@ export default function Navigation({props,sectionRef,projectRef,HomeRef,aboutRef
   }, []);
 
   return (
-    <Navbar className="bg-light min-w-full sticky top-0 z-10 rounded-none">
+    <Navbar className={`${isTheme ? 'bg-light ' : 'bg-dark text-light'} min-w-full sticky top-0 z-10 rounded-none`}>
       <div className="flex items-center justify-between text-blue-gray-900  ">
         <Typography
           as="a"
@@ -84,7 +99,7 @@ export default function Navigation({props,sectionRef,projectRef,HomeRef,aboutRef
           <NavList props={props} sectionRef={sectionRef} projectRef={projectRef} aboutRef={aboutRef} HomeRef={HomeRef} />
         </div>
         <div className="hidden lg:flex items-center">
-          <img src="/Images/avatarimg.png" className="w-10 cursor-pointer" alt="User Avatar"/>
+          <img src="/Images/avatarimg.png" className="w-10 cursor-pointer" alt="User Avatar" />
         </div>
         <IconButton
           variant="text"
@@ -100,9 +115,9 @@ export default function Navigation({props,sectionRef,projectRef,HomeRef,aboutRef
         </IconButton>
       </div>
       <Collapse open={openNav} className="flex flex-col">
-        <NavList props={props} sectionRef={sectionRef} projectRef={projectRef} aboutRef={aboutRef} HomeRef={HomeRef}/>
+        <NavList props={props} sectionRef={sectionRef} projectRef={projectRef} aboutRef={aboutRef} HomeRef={HomeRef} />
         <div className="flex items-center gap-2 lg:hidden p-4">
-          <img src="/Images/avatarimg.png" className="w-10 cursor-pointer" alt="User Avatar"/>
+          <img src="/Images/avatarimg.png" className="w-10 cursor-pointer" alt="User Avatar" />
         </div>
       </Collapse>
     </Navbar>

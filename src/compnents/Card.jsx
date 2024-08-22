@@ -5,8 +5,11 @@ import {
     Typography,
     Button,
 } from "@material-tailwind/react";
+import { useSelector } from "react-redux";
 
 export function Cardlink({ path}) {
+    const isTheme = useSelector((state) => state.theme.isTheme);
+    
     return (
         <Card className="mt-6 w-64 flex items-center justify-center p-4 m-3">
 
@@ -14,7 +17,7 @@ export function Cardlink({ path}) {
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="mb-4 h-12 w-12 text-gray-900 text-center"
+                className={`mb-4 h-12 w-12  text-center  ${isTheme? 'text-gray-900 ':'text-dark '}  `}
             >
                 <path
                     fillRule="evenodd"

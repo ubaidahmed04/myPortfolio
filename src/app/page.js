@@ -11,8 +11,11 @@ import AutoSlide from '@/compnents/Autoslide';
 import About from '@/compnents/About';
 import Experience from '@/compnents/Experience';
 import Loader from '@/compnents/Loader';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function Home() {
+  const isTheme = useSelector((state) => state.theme.isTheme);
+
   const [loader,setLoader] = useState(true)
   const HomeRef = useRef(null)
   const sectionRef = useRef(null)
@@ -29,7 +32,7 @@ export default function Home() {
    useEffect(()=>{
    const timer =  setTimeout(()=>{
       setLoader(false)
-    },500)
+    },100)
     return ()=> clearTimeout(timer)
    },[])
   return (
@@ -38,11 +41,12 @@ export default function Home() {
         loader ?  <div className='h-[100vh] flex justify-center items-center bg-dark'>
         <Loader />
       </div> :(
-      <main className='bg-dark '>
+      <main  className={` ${isTheme? 'bg-dark text-dark':'bg-light text-light'}`}>
         <Navigation  props={scrollTo} sectionRef={sectionRef}/>
         <Herosection />
       
         <About />
+        <Experience/>
         <AutoSlide props={scrollTo} sectionRef={sectionRef}/>
         {/* <TextCard/> */}
         <div

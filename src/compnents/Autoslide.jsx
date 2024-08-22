@@ -1,8 +1,11 @@
 import React from 'react'
 import Slider from "react-slick";
 import { NewCard } from './NewCard';
+import { useSelector } from 'react-redux';
 
 const Autoslide = () => {
+  const isTheme = useSelector((state) => state.theme.isTheme);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -38,10 +41,10 @@ const Autoslide = () => {
 
   return (
     <>
-     <span className='text-4xl md:text-6xl py-12 sm:px-14 px-6  font-semibold font-agustina  text-shadow-custom'>
+     <span className={`text-4xl ${isTheme? 'text-light':'text-dark'} md:text-6xl py-12 sm:px-14 px-6  font-semibold font-agustina  text-shadow-custom`}>
             Projects
           </span>
-    <div className="slider-container bg-dark sm:px-14 px-6 py-12">
+    <div className={`slider-container ${isTheme? 'text-light bg-dark':'text-dark bg-light'}  sm:px-14 px-6 py-12`}>
       
      
       <Slider {...settings}>
