@@ -6,7 +6,7 @@ import { fadeIn } from './variants';
 function About() {
   return (
     <>
-      <div className=' xl:py-[100px] pt-20  sm:px-14 px-6  py-20 flex flex-col justify-center lg:justify-between md:flex-row flex-wrap gap-8 '>
+      <div className=' xl:py-[200px] pt-20  sm:px-14 px-6  py-20 flex flex-col justify-center lg:justify-between md:flex-row flex-wrap gap-8 '>
         <motion.div
           variants={fadeIn('right', 0.2)}
           initial="hidden"

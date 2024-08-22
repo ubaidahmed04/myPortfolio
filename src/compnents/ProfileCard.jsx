@@ -2,13 +2,13 @@ import React from 'react';
 
 const ProfileCard = () => {
   return (
-    <div className="bg-gray w-full max-w-sm sm:max-w-md hover:shadow-custom-hover md:max-w-lg lg:max-w-xl   rounded-lg ">
+    <div className="bg-gray w-full max-w-sm sm:max-w-md hover:shadow-custom-hover md:max-w-lg lg:max-w-xl   rounded-xl ">
       {/* Banner Image */}
     
       <div className="w-full h-40 md:h-48 lg:h-56">
         <img
           loading="lazy"
-          className="w-full h-full object-cover"
+          className="w-full h-full rounded-xl object-cover"
           src="/Images/banner.webp"
           alt="Banner"
         />

@@ -5,6 +5,7 @@ import { Card, Input, Button } from "@material-tailwind/react";
 import Icon from "./Icon";
 import { motion } from 'framer-motion';
 import { fadeIn,  } from './variants';
+import Socialmedia from "./Socialmedia";
 
 
 function ContactSec() {
@@ -42,7 +43,8 @@ function ContactSec() {
                 <span className="text-lg font-medium !text-teal-200">75800 Karachi PK</span>
               </div>
               <div className="flex gap-4 mt-6">
-                <Icon />
+                <Socialmedia/>
+                {/* <Icon /> */}
               </div>
             </div>
           </div>

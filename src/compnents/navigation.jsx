@@ -3,17 +3,11 @@ import {
   Navbar,
   Collapse,
   Typography,
-  Button,
   IconButton,
   List,
   ListItem,
-  Menu,
-  MenuHandler,
-  MenuList,
-  MenuItem,
 } from "@material-tailwind/react";
 import {
-  ChevronDownIcon,
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
@@ -22,103 +16,14 @@ import {
   WrenchIcon,
   GiftIcon,
 } from "@heroicons/react/24/solid";
-import { useContactRef } from "./variants";
-const navListMenuItems = [
-  {
-    title: "Projects",
-    description: "Find the perfect Ideas for your needs.",
-    icon: CodeBracketIcon,
-  },
-  {
-    title: "Techstack",
-    description: "Meet and learn about our dedication",
-    icon: GiftIcon,
-  },
-  {
-    title: "ToolStack",
-    description: "What tool we use to build dynamic sites",
-    icon: WrenchIcon,
-  },
-];
-
-function NavListMenu({props,sectionRef}) {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-
-  const renderItems = navListMenuItems.map(
-    ({ icon, title, description }, key) => (
-      <a href="#" key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg p-2 hover:bg-gray-200">
-          <div className="flex items-center justify-center rounded-lg bg-blue-50 p-2">
-            {React.createElement(icon, {
-              strokeWidth: 3,
-              className: "h-6 text-dark w-9 bg-light m-1",
-            })}
-          </div>
-          <div>
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm font-bold"
-            >
-              {title}
-            </Typography>
-            <Typography
-              variant="paragraph"
-              className="text-xs font-medium text-blue-gray-500"
-            >
-              {description}
-            </Typography>
-          </div>
-        </MenuItem>
-      </a>
-    )
-  );
-
-  return (
-    <React.Fragment>
-      <Menu
-        open={isMenuOpen}
-        handler={setIsMenuOpen}
-        offset={{ mainAxis: 20 }}
-        placement="bottom"
-        allowHover={true}
-      >
-        <MenuHandler>
-          <Typography as="div" variant="small" className="font-mono">
-            <ListItem
-              className="flex items-center gap-2 py-2 pr-4 text-gray-900 tracking-wider cursor-pointer"
-              selected={isMenuOpen || isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
-            >
-              Resources
-              <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`h-5 w-5 transition-transform ${isMenuOpen || isMobileMenuOpen ? "rotate-180" : ""}`}
-              />
-            </ListItem>
-          </Typography>
-        </MenuHandler>
-        <MenuList className="hidden lg:block">
-          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 p-2">
-            {renderItems}
-          </ul>
-        </MenuList>
-      </Menu>
-      <div className="block lg:hidden">
-        <Collapse open={isMobileMenuOpen}>
-          {renderItems}
-        </Collapse>
-      </div>
-    </React.Fragment>
-  );
-}
 
 
-function NavList({props,sectionRef,projectRef}) {
+
+
+function NavList({props,sectionRef,projectRef,HomeRef,aboutRef}) {
   console.log("ref navlist",projectRef)
   return (
-    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex lg:flex-row lg:items-center lg:p-0">
+    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:p-0  flex  sm:flex-col lg:flex-row">
       <Typography
         as="a"
         href="#"
@@ -126,28 +31,30 @@ function NavList({props,sectionRef,projectRef}) {
         color="blue-gray"
         className="font-sans"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4 font-bold tracking-wider" href='#home'>Home</ListItem>
+        <ListItem onClick={()=> props(HomeRef) } className="flex  gap-2 py-2 pr-4 font-bold tracking-wider" >Home</ListItem>
       </Typography>
-      <NavListMenu />
       <Typography
         as="a"
-        href="#"
+       
         variant="small"
         color="blue-gray"
-        className="font-sans"
+        className="font-sans flex justify-center flex-col lg:flex-row gap-3 items-center w-full"
       >
-        <ListItem onClick={()=> props(sectionRef) } className="flex items-center gap-2 py-2 pr-4 font-bold tracking-wider">
-          Contact Us
+        <ListItem onClick={()=> props(sectionRef) } className="flex items-center gap-2 py-2 w-full pr-4 font-bold  tracking-wider">
+          Contact
         </ListItem>
-        <ListItem onClick={()=> props(projectRef) } className="flex items-center gap-2 py-2 pr-4 font-bold tracking-wider">
+        <ListItem onClick={()=> props(projectRef) } className="flex items-center gap-2 w-full py-2 pr-4 font-bold tracking-wider">
           project
+        </ListItem>
+        <ListItem onClick={()=> props(aboutRef) } className="flex items-center gap-2 w-full py-2 pr-4 font-bold tracking-wider">
+          About 
         </ListItem>
       </Typography>
     </List>
   );
 }
 
-export default function Navigation({props,sectionRef,projectRef}) {
+export default function Navigation({props,sectionRef,projectRef,HomeRef,aboutRef}) {
   const [openNav, setOpenNav] = React.useState(false);
   console.log(props.props)
  
@@ -162,7 +69,7 @@ export default function Navigation({props,sectionRef,projectRef}) {
   }, []);
 
   return (
-    <Navbar className="bg-light min-w-full  rounded-none">
+    <Navbar className="bg-light min-w-full sticky top-0 z-10 rounded-none">
       <div className="flex items-center justify-between text-blue-gray-900  ">
         <Typography
           as="a"
@@ -173,8 +80,8 @@ export default function Navigation({props,sectionRef,projectRef}) {
           <span className="block  font-serif text-xl sm:text-4xl italic text-shadow-custom">{"< Ubaid "}</span>
           <span className="block  font-serif text-xl sm:text-4xl italic text-shadow-custom">{"Ahmed / >"}</span>
         </Typography>
-        <div className="hidden lg:flex">
-          <NavList props={props} sectionRef={sectionRef} projectRef={projectRef} />
+        <div className="hidden lg:flex ">
+          <NavList props={props} sectionRef={sectionRef} projectRef={projectRef} aboutRef={aboutRef} HomeRef={HomeRef} />
         </div>
         <div className="hidden lg:flex items-center">
           <img src="/Images/avatarimg.png" className="w-10 cursor-pointer" alt="User Avatar"/>
@@ -192,8 +99,8 @@ export default function Navigation({props,sectionRef,projectRef}) {
           )}
         </IconButton>
       </div>
-      <Collapse open={openNav}>
-        <NavList props={props} sectionRef={sectionRef} projectRef={projectRef}/>
+      <Collapse open={openNav} className="flex flex-col">
+        <NavList props={props} sectionRef={sectionRef} projectRef={projectRef} aboutRef={aboutRef} HomeRef={HomeRef}/>
         <div className="flex items-center gap-2 lg:hidden p-4">
           <img src="/Images/avatarimg.png" className="w-10 cursor-pointer" alt="User Avatar"/>
         </div>

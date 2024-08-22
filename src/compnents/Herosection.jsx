@@ -5,6 +5,7 @@ import { Button } from '@material-tailwind/react';
 import { motion } from 'framer-motion';
 import { fadeIn } from './variants';
 import './Styles.css'
+import Socialmedia from './Socialmedia';
 function Herosection() {
   return (
     <div className="flex flex-col md:flex-row sm:px-10 pt-5 justify-between overflow-x-hidden">
@@ -23,7 +24,8 @@ function Herosection() {
         <span className="text-lg md:text-2xl font-serif text-light pt-3 leading-relaxed">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi repellat at nam provident ipsum consectetur voluptas odit. Id excepturi quas ipsa corrupti quae expedita ratione accusantium magnam exercitationem aliquam. Ipsum.
         </span>
-        <Icon />
+        <Socialmedia/>
+        {/* <Icon /> */}
         <div className="flex gap-3 pt-16 flex-wrap sm:items-center justify-center md:gap-4 md:justify-start md:flex-nowrap">
           <Button className="w-full sm:w-1/2 btn2">
             CONTACT ME
