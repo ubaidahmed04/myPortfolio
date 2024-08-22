@@ -14,7 +14,7 @@ function Experience() {
             Nubit Soft
           </span>
           <span className='text-lime-50'>
-          <span className='text-blue'>FrontEnd Developer:</span>The key to more success is to have a lot of pillows. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I'm never giving up, I'm just getting started. I'm up to something. Fan luv.
+          <span className='text-blue'>FrontEnd Developer:</span>The key to more success is to have a lot of pillows. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I&apos;m never giving up, I&apos;m just getting started. I&apos;m up to something. Fan luv.
           </span>
           </span>
           <span className='flex  lg:flex-col flex-wrap sm:flex-row'>
@@ -22,7 +22,7 @@ function Experience() {
             SMIT
           </span>
           <span className='text-lime-50'>
-          <span className='text-blue'>Web & mobile Application developer:</span>The key to more success is to have a lot of pillows. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I'm never giving up, I'm just getting started. I'm up to something. Fan luv.
+          <span className='text-blue'>Web & mobile Application developer:</span>The key to more success is to have a lot of pillows. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I&apos;m never giving up, I&apos;m just getting started. I&apos;m up to something. Fan luv.
           </span>
           </span>
         </span>
@@ -36,7 +36,7 @@ function Experience() {
            Graduation
           </span>
           <span className='text-lime-50'>
-          <span className='text-blue'>SMIU : </span>The key to more success is to have a lot of pillows. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I'm never giving up, I'm just getting started. I'm up to something. Fan luv.
+          <span className='text-blue'>SMIU : </span>The key to more success is to have a lot of pillows. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I&apos;m never giving up, I&apos;m just getting started. I&apos;m up to something. Fan luv.
           </span>
           </span>
           <span className='flex  flex-col '>
@@ -44,7 +44,7 @@ function Experience() {
             Intermediate
           </span>
           <span className='text-lime-50'>
-          <span className='text-blue'>Adamjee Govt. Science College : </span>The key to more success is to have a lot of pillows. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I'm never giving up, I'm just getting started. I'm up to something. Fan luv.
+          <span className='text-blue'>Adamjee Govt. Science College : </span>The key to more success is to have a lot of pillows. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I&apos;m never giving up, I&apos;m just getting started. I&apos;m up to something. Fan luv.
           </span>
           </span>
           <span className='flex  flex-col'>
@@ -52,7 +52,7 @@ function Experience() {
             Matriculation
           </span>
           <span className='text-lime-50'>
-          <span className='text-blue'>The Children Academy : </span>The key to more success is to have a lot of pillows. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I'm never giving up, I'm just getting started. I'm up to something. Fan luv.
+          <span className='text-blue'>The Children Academy : </span>The key to more success is to have a lot of pillows. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I&apos;m never giving up, I&apos;m just getting started. I&apos;m up to something. Fan luv.
           </span>
           </span>
         </span>
