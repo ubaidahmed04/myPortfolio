@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import { NewCard } from './NewCard';
 import { useSelector } from 'react-redux';
 
-const projectSlide
+const ProjectSlide
  = () => {
   const isTheme = useSelector((state) => state.theme.isTheme);
 
@@ -80,4 +80,4 @@ const projectSlide
   )
 }
 
-export default projectSlide
+export default ProjectSlide
