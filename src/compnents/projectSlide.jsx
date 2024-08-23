@@ -3,7 +3,8 @@ import Slider from "react-slick";
 import { NewCard } from './NewCard';
 import { useSelector } from 'react-redux';
 
-const Autoslide = () => {
+const projectSlide
+ = () => {
   const isTheme = useSelector((state) => state.theme.isTheme);
 
   const settings = {
@@ -12,7 +13,7 @@ const Autoslide = () => {
     slidesToShow: 2, // Default number of slides to show
     slidesToScroll: 1,
     autoplay: true,
-    speed: 4000,
+    // speed: 4000,
     autoplaySpeed: 3000,
     cssEase: "linear",
     responsive: [
@@ -79,4 +80,4 @@ const Autoslide = () => {
   )
 }
 
-export default Autoslide
+export default projectSlide

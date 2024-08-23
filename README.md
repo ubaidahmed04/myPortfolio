@@ -7,7 +7,7 @@ Make sure you have Node.js and npm installed on your machine.
 
 1. **Clone the repository:**
    ```bash
-     https://github.com/SharjeelHussain877/certificate-generation-portal.git
+    https://github.com/ubaidahmed04/myPortfolio.git
 
 
 ### *Navigate to the project directory:

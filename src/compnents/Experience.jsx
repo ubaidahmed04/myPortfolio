@@ -6,9 +6,9 @@ function Experience() {
 
   return (
     <div className=' xl:py-[100px] pt-20  sm:px-14 px-6  py-20'>
-      <span className='flex md:flex-row gap-4 sm:flex-col'>
+      <span className='flex md:flex-row gap-4 flex-col'>
         <span className='xl:w-1/2'>
-        <span className={`text-4xl md:text-6xl font-semibold font-agustina ${isTheme? 'text-dark':'text-dark'} text-shadow-custom`}>
+        <span className={`text-4xl md:text-6xl font-semibold font-agustina ${isTheme? 'text-light':'text-dark'} text-shadow-custom`}>
           Experience
           </span>
 
@@ -29,8 +29,8 @@ function Experience() {
           </span>
           </span>
         </span>
-        <span className='xl:w-1/2    sm:py-12 lg:py-2'>
-        <span className={`text-4xl md:text-6xl font-semibold font-agustina ${isTheme? 'text-dark':'text-dark'} text-shadow-custom`}>
+        <span className='xl:w-1/2     lg:py-2'>
+        <span className={`text-4xl md:text-6xl font-semibold font-agustina ${isTheme? 'text-light':'text-dark'} text-shadow-custom`}>
           Education 
           </span>
 

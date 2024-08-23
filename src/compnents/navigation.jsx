@@ -11,11 +11,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import {
-  CodeBracketIcon,
-  WrenchIcon,
-  GiftIcon,
-} from "@heroicons/react/24/solid";
+
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "@/app/redux/themeSlice";
 
@@ -24,8 +20,10 @@ import { toggleTheme } from "@/app/redux/themeSlice";
 
 function NavList({ props, sectionRef, projectRef, HomeRef, aboutRef }) {
   const isTheme = useSelector((state) => state.theme.isTheme);
-  console.log(isTheme, "theme check")
   const dispatch = useDispatch();
+  const handleToggle = () => {
+    dispatch(toggleTheme());
+  };
   return (
     <List className={`mt-4 mb-6 p-0 ${isTheme ? 'text-dark' : 'text-light'} lg:mt-0 lg:mb-0 lg:p-0  flex  sm:flex-col lg:flex-row`}>
       <Typography
@@ -33,7 +31,7 @@ function NavList({ props, sectionRef, projectRef, HomeRef, aboutRef }) {
         href="#"
         variant="small"
         // color="blue-gray"
-        className="font-sans"
+        className="font-sans flex items-center"
       >
         <ListItem onClick={() => props(HomeRef)} className="flex  gap-2 py-2 pr-4 font-bold tracking-wider" >Home</ListItem>
       </Typography>
@@ -54,13 +52,16 @@ function NavList({ props, sectionRef, projectRef, HomeRef, aboutRef }) {
         <ListItem onClick={() => props(aboutRef)} className="flex items-center gap-2 w-full py-2 pr-4 font-bold tracking-wider">
           About
         </ListItem>
-        <ListItem  className="flex items-center gap-2 py-2 w-full pr-4 font-bold  tracking-wider">
-          {/* {isTheme ? 'Dark' : 'Light'} */}
-          <label class="switch">
-            <input type="checkbox" onClick={() => dispatch(toggleTheme())} />
-            <span class="slider"></span>
-          </label>
-        </ListItem>
+        <span className="flex items-center gap-2 py-2 w-full pr-4 font-bold tracking-wider">
+      <label className="switch">
+        <input 
+          type="checkbox" 
+          checked={isTheme}  
+          onChange={handleToggle} 
+        />
+        <span className="slider"></span>
+      </label>
+    </span>
       </Typography>
     </List>
   );
