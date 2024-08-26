@@ -58,7 +58,7 @@ function Socialmedia() {
         <a
           data-social="instagram"
           aria-label="Instagram"
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/ubaidahmed04"
         >
           <div className="filled" />
           <svg
@@ -82,7 +82,7 @@ function Socialmedia() {
         <a
           data-social="youtube"
           aria-label="Youtube"
-          href="https://youtube.com/"
+          href="https://www.facebook.com/profile.php?id=100055489695083&mibextid=ZbWKwL"
         >
           <div className="filled" />
          

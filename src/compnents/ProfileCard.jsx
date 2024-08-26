@@ -3,8 +3,7 @@ import React from 'react';
 const ProfileCard = () => {
   return (
     <div className="bg-gray w-full max-w-sm sm:max-w-md hover:shadow-custom-hover md:max-w-lg lg:max-w-xl   rounded-xl ">
-      {/* Banner Image */}
-    
+
       <div className="w-full h-40 md:h-48 lg:h-56">
         <img
           loading="lazy"
@@ -14,9 +13,7 @@ const ProfileCard = () => {
         />
       </div>
 
-      {/* Avatar and Content */}
       <div className="p-4 text-center flex flex-col items-center ">
-        {/* Avatar */}
         <div className="relative bottom-16">
           <img
             className="w-32 h-32 md:w-40 md:h-40 object-cover  rounded-full border-4 border-white shadow-md"
@@ -25,7 +22,6 @@ const ProfileCard = () => {
           />
         </div>
 
-        {/* Title and Subtitle */}
         <div className=" mb-2 text-xl md:text-2xl text-light font-semibold text-shadow-custom">
           Ubaid Ahmed
         </div>
@@ -33,10 +29,8 @@ const ProfileCard = () => {
           Web Development
         </div>
 
-        {/* Social Media Icons */}
         <div className="mt-4">
           <ul className="flex justify-center space-x-4">
-            {/* Facebook */}
             <li className='bg-dark p-3 rounded-full hover:bg-black'>
               <a href="https://www.facebook.com/people/ubaidahmed04" target="_blank" rel="noopener noreferrer" className="text-light hover:text-light-blue-400">
                 <span className="sr-only">Facebook</span>
@@ -45,7 +39,6 @@ const ProfileCard = () => {
                 </svg>
               </a>
             </li>
-            {/* LinkedIn */}
             <li className='bg-dark p-3 hover:bg-black rounded-full hover:text-light-blue-700 '>
               <a href="https://www.linkedin.com/in/sharjeel-hussain-2820b5293/" target="_blank" rel="noopener noreferrer" className="text-light hover:text-light-blue-700 ">
                 <span className="sr-only">LinkedIn</span>
@@ -54,7 +47,6 @@ const ProfileCard = () => {
                 </svg>
               </a>
             </li>
-            {/* Instagram */}
             <li className='bg-dark p-3 rounded-full hover:bg-black'>
               <a href="https://www.instagram.com/sharjeelhussain877/" target="_blank" rel="noopener noreferrer" className="text-light hover:text-pink-700">
                 <span className="sr-only">Instagram</span>

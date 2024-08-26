@@ -7,8 +7,26 @@ import { fadeIn } from './variants';
 import './Styles.css'
 import Socialmedia from './Socialmedia';
 import { useSelector } from 'react-redux';
+import jsPDF from 'jspdf';
 function Herosection() {
   const isTheme = useSelector((state) => state.theme.isTheme);
+
+  // dowload PDF 
+  const generatePDF = () => {
+    // Create a new jsPDF instance
+    const link = document.createElement('a');
+    
+    // Set the URL to your resume file
+    link.href = '/myResume.pdf'; // Path to the resume file in the public directory
+    link.download = 'myResume.pdf'; // Filename for the downloaded file
+    
+    // Trigger the download
+    link.click();
+  };
+  // redirect to Gmail 
+  const handleEmailRedirect = () => {
+    window.location.href = 'mailto:your-email@gmail.com?subject=Contact%20Request&body=Hello%20there!';
+  };
 
   return (
     <div className="flex flex-col md:flex-row sm:px-10 pt-5 justify-between overflow-x-hidden">
@@ -30,10 +48,10 @@ function Herosection() {
         <Socialmedia/>
         {/* <Icon /> */}
         <div className="flex gap-3 pt-16 flex-wrap sm:items-center justify-center md:gap-4 md:justify-start md:flex-nowrap">
-          <Button className={`w-full sm:w-1/2 ${isTheme? 'text-light':'text-dark'} btn2`}>
+          <Button onClick={handleEmailRedirect} className={`w-full sm:w-1/2 ${isTheme? 'text-light':'text-dark'} btn2`}>
             CONTACT ME
           </Button>
-          <Button className={`w-full sm:w-1/2 ${isTheme? 'text-light':'text-dark'} btn`}>
+          <Button onClick={generatePDF} className={`w-full sm:w-1/2 ${isTheme? 'text-light':'text-dark'} btn`}>
             <span> MY RESUME</span>
           </Button>
         </div>

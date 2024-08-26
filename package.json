@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "^2.1.5",
     "@material-tailwind/react": "^2.1.9",
     "@reduxjs/toolkit": "^2.2.7",
+    "formik": "^2.4.6",
     "framer-motion": "^11.3.22",
     "gsap": "^3.12.5",
+    "jspdf": "^2.5.1",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
@@ -22,7 +25,9 @@
     "react-redux": "^9.1.2",
     "react-slick": "^0.30.2",
     "redux-persist": "^6.0.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.12.4",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "eslint": "^8",
