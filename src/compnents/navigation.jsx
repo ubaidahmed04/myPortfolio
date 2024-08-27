@@ -69,7 +69,7 @@ function NavList({ props, sectionRef, projectRef, HomeRef, aboutRef }) {
 
 export default function Navigation({ props, sectionRef, projectRef, HomeRef, aboutRef }) {
   const isTheme = useSelector((state) => state.theme.isTheme);
-  console.log(isTheme, "theme check")
+  // console.log(isTheme, "theme check")
   const dispatch = useDispatch();
   const [openNav, setOpenNav] = React.useState(false);
 

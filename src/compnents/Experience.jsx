@@ -1,11 +1,18 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
+import { fadeIn, } from './variants';
+import { motion } from 'framer-motion';
 
 function Experience() {
   const isTheme = useSelector((state) => state.theme.isTheme);
 
   return (
-    <div className=' xl:py-[100px] pt-20  sm:px-14 px-6  py-20'>
+    <motion.div 
+    variants={fadeIn('up', 0.2)}
+    initial="hidden"
+    whileInView={"show"}
+    viewport={{ once: false, amount: 0.9 }}
+    className=' xl:py-[100px] pt-20  sm:px-14 px-6  py-20'>
       <span className='flex md:flex-row gap-4 flex-col'>
         <span className='xl:w-1/2'>
         <span className={`text-4xl md:text-6xl font-semibold font-agustina ${isTheme? 'text-light':'text-dark'} text-shadow-custom`}>
@@ -61,7 +68,7 @@ function Experience() {
         </span>
       </span>
 
-    </div>
+    </motion.div>
   )
 }
 

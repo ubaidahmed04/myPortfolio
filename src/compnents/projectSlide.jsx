@@ -2,7 +2,8 @@ import React from 'react'
 import Slider from "react-slick";
 import { NewCard } from './NewCard';
 import { useSelector } from 'react-redux';
-
+import { fadeIn, } from './variants';
+import { motion } from 'framer-motion';
 const ProjectSlide
  = () => {
   const isTheme = useSelector((state) => state.theme.isTheme);
@@ -41,7 +42,11 @@ const ProjectSlide
 
 
   return (
-    <>
+    <motion.div 
+    variants={fadeIn('up', 0.2)}
+    initial="hidden"
+    whileInView={"show"}
+    viewport={{ once: false, amount: 0.9 }}>
      <span className={`text-4xl ${isTheme? 'text-light':'text-dark'} md:text-6xl py-12 sm:px-14 px-6  font-semibold font-agustina  text-shadow-custom`}>
             Projects
           </span>
@@ -76,7 +81,7 @@ const ProjectSlide
 
       </Slider>
     </div>
-    </>
+    </motion.div>
   )
 }
 
