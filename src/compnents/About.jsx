@@ -32,7 +32,7 @@ function About() {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.7 }}
-          className='w-full md:w-1/2 lg:w-1/3 py-12 sm:py-0'
+          className='w-full md:w-1/2 lg:w-1/3 py-12 sm:py-8 md:py-4 lg:py-0'
         >
           <ProfileCard />
         </motion.div>

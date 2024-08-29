@@ -104,7 +104,7 @@ export default function Navigation({ props, sectionRef, projectRef, HomeRef, abo
         </div>
         <IconButton
           variant="text"
-          color="blue-gray"
+          color={`${isTheme ? 'blue-gray' : 'white'}`}
           className="lg:hidden"
           onClick={() => setOpenNav(!openNav)}
         >
