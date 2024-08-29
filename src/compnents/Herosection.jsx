@@ -49,11 +49,12 @@ function Herosection() {
           {/* <Button onClick={handleEmailRedirect} className={`w-full sm:w-1/2 ${isTheme? 'text-light':'text-dark'} btn2`}>
             CONTACT ME
           </Button> */}
-        <Contactme/>
 
           <Button onClick={generatePDF} className={`w-full sm:w-1/2 ${isTheme ? 'text-light' : 'text-dark'} btn`}>
             <span> MY RESUME</span>
           </Button>
+        <Contactme/>
+
         </div>
       </motion.div>
       <motion.div
