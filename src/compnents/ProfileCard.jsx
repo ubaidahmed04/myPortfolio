@@ -1,25 +1,35 @@
 import React from 'react';
+import {bannerBase64,profileLogo} from '../app/Const/Base64'
+import Image from 'next/image';
 
 const ProfileCard = () => {
   return (
     <div className="bg-gray w-full max-w-sm sm:max-w-md hover:shadow-custom-hover md:max-w-lg lg:max-w-xl   rounded-xl ">
 
       <div className="w-full h-40 md:h-48 lg:h-56">
-        <img
-          loading="lazy"
+        <Image
           className="w-full h-full rounded-xl object-cover"
           src="/Images/banner.webp"
+          width={500}
+          height={300}
+          placeholder="blur"
+          blurDataURL={bannerBase64}
           alt="Banner"
         />
       </div>
 
       <div className="p-4 text-center flex flex-col items-center ">
         <div className="relative bottom-16">
-          <img
-            className="w-32 h-32 md:w-40 md:h-40 object-cover  rounded-full border-4 border-white shadow-md"
-            src="/Images/logo.jpg"
-            alt="Profile Picture"
-          />
+        <Image
+          src="/Images/logo.jpg"
+          alt="Profile Picture"
+          width={500}
+          height={300}
+           className="w-32 h-32 md:w-40 md:h-40 object-cover  rounded-full border-4 border-white shadow-md"
+          placeholder="blur"
+          blurDataURL={profileLogo}
+        />
+         
         </div>
 
         <div className=" mb-2 text-xl md:text-2xl text-light font-semibold text-shadow-custom">

@@ -9,9 +9,10 @@ import Socialmedia from './Socialmedia';
 import { useSelector } from 'react-redux';
 import jsPDF from 'jspdf';
 import Contactme from './Contactme';
+import Image from 'next/image';
+import {proflieBase64} from '../app/Const/Base64'
 function Herosection() {
   const isTheme = useSelector((state) => state.theme.isTheme);
-
   // dowload PDF 
   const generatePDF = () => {
     // Create a new jsPDF instance
@@ -25,7 +26,7 @@ function Herosection() {
     link.click();
   };
   // redirect to Gmail 
- 
+
   return (
     <div className="flex flex-col md:flex-row sm:px-10 pt-5 pb-28 justify-between overflow-x-hidden">
       <motion.div
@@ -53,7 +54,7 @@ function Herosection() {
           <Button onClick={generatePDF} className={`w-full sm:w-1/2 ${isTheme ? 'text-light' : 'text-dark'} btn`}>
             <span> MY RESUME</span>
           </Button>
-        <Contactme/>
+          <Contactme />
 
         </div>
       </motion.div>
@@ -64,7 +65,15 @@ function Herosection() {
         viewport={{ once: false, amount: 0.7 }}
         className="hidden md:block md:w-[400px] md:ml-8"
       >
-        <img src='/Images/avatarimg.png' loading="lazy" className='w-full rounded-full' alt="avatar" />
+        <Image
+          src="/Images/avatarimg.png"
+          alt="Description of the image"
+          width={500}
+          height={300}
+          placeholder="blur"
+          blurDataURL={proflieBase64}
+        />
+       
       </motion.div>
     </div>
   );
