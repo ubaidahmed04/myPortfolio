@@ -5,8 +5,9 @@ import {
     Typography,
     Button,
   } from "@material-tailwind/react";
+import Image from "next/image";
   
-  export function NewCard({title,description,URL,path}) {
+  export function NewCard({title,description,URL,path,blurImageUrl}) {
     return (
       <>
        <Card className="w-full max-w-[60rem]  h-96 sm:h-80 md:h-80 flex-col sm:flex-row aspect-w-16 aspect-h-9 bg-none">
@@ -15,10 +16,14 @@ import {
     floated={false}
     className="m-0 w-full sm:w-2/5 shrink-0 rounded-b-none sm:rounded-r-none bg-none"
   >
-    <img
+    <Image
+      height={500}
+      width={300}
       src={URL}
       className="h-full w-full transform transition-transform duration-500 hover:scale-110 object-cover"
       alt="Project image "
+      placeholder="blur"
+      blurDataURL={blurImageUrl}
     />
   </CardHeader>
   <CardBody className="p-4 bg-gray text-light flex justify-around flex-col overflow-hidden">
