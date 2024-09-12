@@ -40,7 +40,7 @@ const sendEmail = (values) => {
       from_email: values.email, 
       reply_to: values.email,  
     },
-    'ZyhFH5OaTngJ9HvGo'
+    'xZzt_m_2tW7AHgdJu'
   ).then((result) => {
     console.log('Email sent successfully:', result.text);
     Swal.fire({
