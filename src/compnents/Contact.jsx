@@ -69,12 +69,12 @@ function ContactSec() {
       initial="hidden"
       whileInView={"show"}
       viewport={{ once: false, amount: 0.4 }}
-      className=" p-2 py-28 px-4  overflow-x-hidden">
+      className=" p-2 py-28   overflow-x-hidden">
       <div className="text-center mb-10">
         <b className={`  ${isTheme ? 'text-light' : 'text-dark'}  contact-heading  text-3xl font-bold`}>Get in Touch</b>
         <span className={`text-lg block mt-2 ${isTheme ? 'text-teal-200' : 'text-teal-500'}`} >Ask Any Question Or Remarks? Just write a Message!</span>
       </div>
-      <div className="mx-auto rounded-4 p-8  overflow-hidden">
+      <div className="mx-auto rounded-4 sm:p-8  overflow-hidden">
         <div className={`contact-links ${isTheme ? 'text-light' : 'text-dark'}   flex flex-col lg:flex-row gap-10`}>
           <div className="lg:w-1/2">
             <div className="flex flex-col">
