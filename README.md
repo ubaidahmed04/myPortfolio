@@ -1,44 +1,56 @@
-## 🚀 Getting Started
+# Ubaid Ahmed — Portfolio (Redesigned)
 
-### Prerequisites
-Make sure you have Node.js and npm installed on your machine.
+A modernized, production-ready rebuild of the original Next.js portfolio. All
+original content (bio, experience, education, projects, socials, resume) is
+preserved — only the design system, component architecture, and code quality
+have changed.
 
-### How to Clone the Project
+## Stack
 
-1. **Clone the repository:**
-   ```bash
-    https://github.com/ubaidahmed04/myPortfolio.git
+- Next.js 14 (App Router)
+- React 18
+- Tailwind CSS
+- Framer Motion
+- Lucide React icons
+- Formik + Yup (contact form validation)
+- react-github-calendar (GitHub activity)
 
+## Getting started
 
-### *Navigate to the project directory:
-  cd ./dir
+```bash
+npm install
+npm run dev
+```
 
-### *Install dependencies
-    npm install
+Open http://localhost:3000.
 
-### *Run the development server:
-    npm run dev
+## What changed
 
-### *Open your browser and visit:
-    http://localhost:3000
+- **Design system**: new palette (`#19183B` primary, `#708993` secondary,
+  `#A1C2BD` accent, `#E7F2EF` paper), dark theme by default, Space Grotesk +
+  Inter + JetBrains Mono type system, glassmorphism cards, soft glows.
+- **Signature element**: an animated "terminal" card in the hero that types
+  out your identity and stats — a nod to the developer subject matter instead
+  of a generic gradient blob.
+- **Architecture**: content extracted into `src/data/portfolio.js` (single
+  source of truth), one component per section, no duplicate/dead code, no
+  inline styles, no unused state.
+- **Removed**: the Redux theme-toggle store, Material Tailwind, the
+  react-three-fiber 3D computer model, and MagicUI marquee — all replaced
+  with lighter, purpose-built components using Tailwind + Framer Motion. This
+  cuts the dependency footprint significantly and removes render-blocking 3D
+  work from the contact section.
+- **Accessibility**: semantic sectioning, visible focus rings, reduced-motion
+  support, alt text on all images, keyboard-operable nav and menu.
+- **Performance**: `next/image` everywhere, no unnecessary client components
+  (only interactive pieces are `"use client"`).
 
-### Fork the repository.
-  #### Create a new branch:
-        git checkout -b feature/your-feature-name
-  #### Make your changes and commit them:
-        git commit -m 'Add some feature'
-  #### Push to the branch
-        git push origin feature/your-feature-name
+## Content notes
 
-## Create a Pull Request.
-You can also create an issue if you find a bug or have a suggestion.
-
-## 📞 Contact
-If you have any questions or need further assistance, feel free to open an issue or contact me at ubaidahmed2040@gmail.com.
-
-___
-
-# Happy epic coders 🎉
-
-___
-
+Two placeholder/education entries from the original codebase (`Experience.jsx`,
+which wasn't actually rendered on the live site) contained generic filler text
+unrelated to your real education. Those were replaced with clean entries using
+only the real institution names and degree levels you provided (SMIU —
+Graduation, Adamjee Govt. Science College — Intermediate). Everything else —
+your bio, your four NubitSoft roles and their responsibilities, your four
+projects, and your contact/social links — is carried over verbatim.
